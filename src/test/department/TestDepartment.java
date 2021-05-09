@@ -1,4 +1,4 @@
-package test;
+package test.department;
 
 import model.entities.Department;
 

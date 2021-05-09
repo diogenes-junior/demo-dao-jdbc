@@ -1,4 +1,4 @@
-package test;
+package test.seller;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package test;
+package test.seller;
 
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
