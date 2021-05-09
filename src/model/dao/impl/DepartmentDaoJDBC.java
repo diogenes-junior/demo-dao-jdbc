@@ -21,8 +21,6 @@ public class DepartmentDaoJDBC implements DepartmentDao{
 
 	@Override
 	public void insert(Department obj) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
@@ -33,8 +31,22 @@ public class DepartmentDaoJDBC implements DepartmentDao{
 
 	@Override
 	public void deleteById(Integer id) {
-		// TODO Auto-generated method stub
+		PreparedStatement st = null;
 		
+		try {
+			st = conn.prepareStatement("DELETE FROM Department WHERE Id = ?");
+			st.setInt(1, id);
+			int rowsAffected = st.executeUpdate();
+			if(rowsAffected == 0) {
+				System.out.println("Not found!");
+			}
+		}
+		catch(SQLException e) {
+			throw new DBException(e.getMessage());			
+		}
+		finally {
+			DB.closeStatement(st);
+		}		
 	}
 
 	@Override
