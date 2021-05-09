@@ -19,6 +19,8 @@ public class TestSellerFindById {
 		seller = sellerDao.findById(sellerId);
 		
 		System.out.println(seller);
+		
+		input.close();
 	}
 
 }

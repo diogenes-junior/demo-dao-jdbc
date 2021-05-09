@@ -27,6 +27,8 @@ public class TestSellerFindByDepartment {
 		for(Seller obj : sellers) {
 			System.out.println(obj);
 		}
+		
+		input.close();
 	}
 
 }
